@@ -18,3 +18,4 @@ jobs:
         name: domenkozar
         signingKey: '${{ secrets.CACHIX_SIGNING_KEY }}'
     - run: nix-store -r /nix/store/dqlx77d224grs7ch39jhgfplf68mg6sl-python3.8-pre-commit-2.7.1
+    - run: nix-hash --type sha256 --base32 /nix/store/dqlx77d224grs7ch39jhgfplf68mg6sl-python3.8-pre-commit-2.7.1
