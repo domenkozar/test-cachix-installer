@@ -9,6 +9,10 @@ jobs:
     - uses: cachix/install-nix-action@v12
       with:
         install_url: https://releases.nixos.org/nix/nix-2.3.7/install
+        extra_nix_config: |
+            sandbox = false
+            http2 = false
+            http-connections = 24
     - uses: cachix/cachix-action@v8
       with:
         name: domenkozar
